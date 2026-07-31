@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+.sitewide {
+  background-color: #ccd5ae;
+}
+
+.body {
+  background-color: #e9edc9;
+
+}
+
+.container {
+  background-color: #fefae0;
+
+}
+

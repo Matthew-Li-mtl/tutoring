@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.available {
+    background-color: #b5f3af
+}
+
+.full {
+    background-color: #fca68c
+}
