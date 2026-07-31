@@ -5,8 +5,10 @@
     "vite": "^8.1.5"
   },
   "scripts": {
-  "dev": "vite",
-  "build": "vite build tutoring-website/tutoring-personal-site"
-}
-
+    "dev": "vite",
+    "build": "vite build tutoring-website/tutoring-personal-site"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5"
+  }
 }
