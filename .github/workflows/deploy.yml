@@ -12,9 +12,9 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: "tutoring-website/tutoring-personal-site"
+#    defaults:
+#      run:
+#        working-directory: "tutoring-website/tutoring-personal-site"
 
     steps:
       - name: Checkout repo
