@@ -39,14 +39,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci
-          # Highlight-start
-          # Manually download the exact missing Linux binary package
-          npm install --no-save lightningcss-linux-x64-gnu
+          # Completely delete the local lockfile and node_modules on the runner
+          rm -rf node_modules package-lock.json
           
-          # Force copy the binary file into the core lightningcss module directory
-          cp node_modules/lightningcss-linux-x64-gnu/lightningcss.linux-x64-gnu.node node_modules/lightningcss/
-          # Highlight-end
+          # Force a clean install that naturally fetches Linux binaries
+          npm install
+
 
       - name: Build project
         run: npm run build
