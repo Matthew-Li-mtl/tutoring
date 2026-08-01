@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/tutoring/",
   plugins: [react(), tailwindcss(),],
   //root: path.resolve(__dirname, 'tutoring website/tutoring-personal-site')
 })
