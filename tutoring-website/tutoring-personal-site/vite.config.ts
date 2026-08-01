@@ -8,4 +8,7 @@ export default defineConfig({
   base: "/tutoring/",
   plugins: [react(), tailwindcss(),],
   //root: path.resolve(__dirname, 'tutoring website/tutoring-personal-site')
+  build: {
+    cssMinify: 'esbuild' // Forces Vite to use esbuild, bypassing lightningcss completely
+  }
 })
