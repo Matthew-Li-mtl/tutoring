@@ -39,11 +39,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # Completely delete the local lockfile and node_modules on the runner
           rm -rf node_modules package-lock.json
-          
-          # Force a clean install that naturally fetches Linux binaries
           npm install
+
 
 
       - name: Build project
