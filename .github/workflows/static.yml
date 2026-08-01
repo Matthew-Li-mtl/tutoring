@@ -38,7 +38,11 @@ jobs:
           cache-dependency-path: tutoring-website/tutoring-personal-site/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        # By adding the linux platform explicitly, npm pulls down the missing file
+        run: |
+          npm ci
+          npm install --save-optional lightningcss-linux-x64-gnu
+
 
       - name: Build project
         run: npm run build
