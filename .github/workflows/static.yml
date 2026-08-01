@@ -38,14 +38,19 @@ jobs:
           cache-dependency-path: tutoring-website/tutoring-personal-site/package-lock.json
 
       - name: Install dependencies
-        # By adding the linux platform explicitly, npm pulls down the missing file
         run: |
           npm ci
-          npm install --save-optional lightningcss-linux-x64-gnu
-
+          # Highlight-start
+          # Manually download the exact missing Linux binary package
+          npm install --no-save lightningcss-linux-x64-gnu
+          
+          # Force copy the binary file into the core lightningcss module directory
+          cp node_modules/lightningcss-linux-x64-gnu/lightningcss.linux-x64-gnu.node node_modules/lightningcss/
+          # Highlight-end
 
       - name: Build project
         run: npm run build
+
 
       # Crucial fix: bypasses Jekyll so GitHub Pages reads underscore assets
       - name: Create .nojekyll file
